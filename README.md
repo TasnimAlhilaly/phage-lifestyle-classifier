@@ -86,6 +86,7 @@ Metrics reported consistently:
 
 - `README.md` — you’re reading it 🙂
 - labels.csv
+- requirements.txt
 
 > Note: source data files are not committed to the repo. See “Data” below.
 
