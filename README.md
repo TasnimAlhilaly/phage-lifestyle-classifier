@@ -28,14 +28,14 @@ In our run:
 
 ---
 
-## Method (What we did)
+## Methods
 
 ### 1) Preprocessing
 - **Data cleaning** (type coercion, handling missing values)
 - **Feature aggregation** (multiple feature sources combined into a single matrix keyed by `phage_id`)
 - **Normalization / scaling** (StandardScaler where needed for PCA/SVM/LabelSpreading)
 - **Zero-variance filtering** (remove features with no information)
-- 
+  
 ### 2) Train/Validation/Test split (ground truth only)
 We split **only the labeled (337)** samples using **stratification** to preserve the yes/no ratio:
 - 70% train
@@ -54,11 +54,11 @@ We fit `LabelSpreading(kernel="knn")` on:
 then kept pseudo-labels above a confidence threshold (`thr`, e.g. 0.8).
 
 Example outcome from our run:
-- Validation BAC (LabelSpreading): **~0.889**
+- Validation BAC (LabelSpreading): **~0.8315**
 - Unlabeled total: **6819**
-- Pseudo-labeled kept (thr=0.8): **5113**
-  - predicted **no**: 3274
-  - predicted **yes**: 1839
+- Pseudo-labeled kept (thr=0.8): **5285**
+  - predicted **no**: 3643
+  - predicted **yes**: 1642
 
 ### 5) Supervised models
 We trained and tuned (train + CV, checked on validation), then retrained on (train+val) and tested once on test:
@@ -87,7 +87,7 @@ Metrics reported consistently:
 - `README.md` — you’re reading it 🙂
 - labels.csv
 
-> Note: data files are not committed to the repo. See “Data” below.
+> Note: source data files are not committed to the repo. See “Data” below.
 
 ---
 
