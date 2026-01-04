@@ -1,6 +1,6 @@
 # Phage Lifestyle Prediction (Temperate vs Lytic) — Semi-Supervised ML
 
-This project predicts **phage lifestyle** (temperate vs non-temperate/lytic) from engineered proteomic/annotation features using a **semi-supervised pipeline**:
+This project predicts **phage lifestyle** (temperate vs non-temperate/lytic) from engineered proteomic features using a **semi-supervised pipeline**:
 
 1) trained on the small labeled set  
 2) expanded labels with **Label Spreading** (high-confidence pseudo-labels)  
